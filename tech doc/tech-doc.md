@@ -1,4 +1,4 @@
-# Technical and Content Specification — Caucasus BioSphere Expeditions
+# Technical and Content Specification — BioCaucasus
 
 ## 1. Project Overview
 
