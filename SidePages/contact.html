@@ -1,0 +1,1936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact & Inquiry | Savalo</title>
+
+    <meta
+        name="description"
+        content="Plan your journey with Savalo. Send an inquiry for tailor-made tours, destinations, travel dates, and personalized experiences."
+    >
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Design System Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#2E5A44',
+                            dark: '#1F4030',
+                            light: '#3F7359'
+                        },
+
+                        secondary: {
+                            DEFAULT: '#D4A373',
+                            dark: '#AE7B50',
+                            light: '#E2BD96'
+                        },
+
+                        glacier: {
+                            DEFAULT: '#8FBFCC',
+                            light: '#DCECF1',
+                            dark: '#527F8D'
+                        },
+
+                        earth: {
+                            50: '#F7F8F5',
+                            100: '#F1EEE7',
+                            200: '#E7E2D8',
+                            300: '#D6CFC1',
+                            500: '#8B6548',
+                            700: '#526057',
+                            900: '#202822'
+                        },
+
+                        forest: '#2E5A44',
+                        steppe: '#D4A373',
+                        rainforest: '#3F8062',
+                        alpine: '#729DB1',
+
+                        success: '#287A4D',
+                        error: '#B94A48'
+                    },
+
+                    fontFamily: {
+                        display: ['Cormorant Garamond', 'Georgia', 'serif'],
+                        sans: ['Inter', 'Arial', 'sans-serif']
+                    },
+
+                    maxWidth: {
+                        content: '1200px',
+                        wide: '1400px'
+                    },
+
+                    borderRadius: {
+                        card: '1.25rem'
+                    },
+
+                    boxShadow: {
+                        soft: '0 8px 30px rgba(32, 40, 34, 0.08)',
+                        card: '0 18px 50px rgba(32, 40, 34, 0.10)',
+                        floating: '0 26px 70px rgba(32, 40, 34, 0.14)'
+                    }
+                }
+            }
+        };
+    </script>
+</head>
+
+<body class="bg-earth-50 font-sans text-earth-900 antialiased">
+
+    <!-- Header -->
+    <header
+        id="siteHeader"
+        class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-white/90 backdrop-blur-xl transition-all duration-300"
+    >
+        <nav
+            class="mx-auto flex h-20 max-w-wide items-center justify-between px-5 sm:px-8 lg:px-12"
+            aria-label="Primary Navigation"
+        >
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-3" aria-label="Savalo Home">
+
+                <div
+                    class="grid h-11 w-11 place-items-center rounded-full border border-primary/20 bg-primary text-white"
+                    aria-hidden="true"
+                >
+                    <svg
+                        viewBox="0 0 48 48"
+                        class="h-7 w-7"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            d="M6 34L17 17L24 27L31 13L42 34H6Z"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linejoin="round"
+                        />
+                        <path
+                            d="M14 34L24 21L34 34"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                        />
+                    </svg>
+                </div>
+
+                <div>
+                    <div class="font-display text-2xl font-semibold leading-none text-primary-dark">
+                        Savalo
+                    </div>
+
+                    <div class="mt-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-earth-700">
+                        Travel Georgia
+                    </div>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden items-center gap-8 lg:flex">
+                <a
+                    href="index.html"
+                    class="text-sm font-semibold text-earth-700 transition hover:text-primary"
+                >
+                    Home
+                </a>
+
+                <a
+                    href="tours.html"
+                    class="text-sm font-semibold text-earth-700 transition hover:text-primary"
+                >
+                    Tours
+                </a>
+
+                <a
+                    href="destinations.html"
+                    class="text-sm font-semibold text-earth-700 transition hover:text-primary"
+                >
+                    Destinations
+                </a>
+
+                <a
+                    href="about.html"
+                    class="text-sm font-semibold text-earth-700 transition hover:text-primary"
+                >
+                    About
+                </a>
+
+                <a
+                    href="contact.html"
+                    class="relative text-sm font-semibold text-primary"
+                    aria-current="page"
+                >
+                    Contact
+
+                    <span
+                        class="absolute -bottom-2 left-0 h-0.5 w-full rounded-full bg-secondary"
+                    ></span>
+                </a>
+            </div>
+
+            <!-- Desktop CTA -->
+            <a
+                href="#inquiry"
+                class="hidden rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white shadow-soft transition duration-300 hover:-translate-y-0.5 hover:bg-primary-dark hover:shadow-card lg:inline-flex"
+            >
+                Plan Your Journey
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button
+                id="menuToggle"
+                type="button"
+                class="grid h-11 w-11 place-items-center rounded-full border border-earth-200 bg-white text-primary-dark lg:hidden"
+                aria-label="Open navigation"
+                aria-controls="mobileMenu"
+                aria-expanded="false"
+            >
+                <svg
+                    id="menuIcon"
+                    class="h-5 w-5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                >
+                    <path d="M4 7h16"></path>
+                    <path d="M4 12h16"></path>
+                    <path d="M4 17h16"></path>
+                </svg>
+            </button>
+        </nav>
+
+        <!-- Mobile Navigation -->
+        <div
+            id="mobileMenu"
+            class="hidden border-t border-earth-200 bg-white px-5 py-6 lg:hidden"
+        >
+            <div class="mx-auto flex max-w-wide flex-col gap-1">
+                <a
+                    href="index.html"
+                    class="rounded-xl px-4 py-3 font-medium text-earth-700 hover:bg-earth-50"
+                >
+                    Home
+                </a>
+
+                <a
+                    href="tours.html"
+                    class="rounded-xl px-4 py-3 font-medium text-earth-700 hover:bg-earth-50"
+                >
+                    Tours
+                </a>
+
+                <a
+                    href="destinations.html"
+                    class="rounded-xl px-4 py-3 font-medium text-earth-700 hover:bg-earth-50"
+                >
+                    Destinations
+                </a>
+
+                <a
+                    href="about.html"
+                    class="rounded-xl px-4 py-3 font-medium text-earth-700 hover:bg-earth-50"
+                >
+                    About
+                </a>
+
+                <a
+                    href="contact.html"
+                    class="rounded-xl bg-primary/5 px-4 py-3 font-semibold text-primary"
+                >
+                    Contact
+                </a>
+
+                <a
+                    href="#inquiry"
+                    class="mt-4 inline-flex justify-center rounded-full bg-primary px-5 py-3 font-semibold text-white"
+                >
+                    Plan Your Journey
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Hero Section -->
+        <section
+            class="relative min-h-[720px] overflow-hidden pt-20 lg:min-h-[780px]"
+        >
+            <!-- Hero Image -->
+            <img
+                src="https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=2200&q=90"
+                alt="Dramatic mountain landscape in Georgia"
+                class="absolute inset-0 h-full w-full object-cover"
+            >
+
+            <!-- Hero Gradient -->
+            <div
+                class="absolute inset-0 bg-gradient-to-r from-primary-dark/95 via-primary-dark/60 to-primary-dark/10"
+            ></div>
+
+            <div
+                class="absolute inset-0 bg-gradient-to-t from-primary-dark/55 via-transparent to-transparent"
+            ></div>
+
+            <!-- Hero Content -->
+            <div
+                class="relative z-10 mx-auto flex min-h-[640px] max-w-wide items-end px-5 pb-20 pt-24 sm:px-8 md:items-center md:pb-10 lg:min-h-[700px] lg:px-12"
+            >
+                <div class="max-w-3xl">
+
+                    <div
+                        class="mb-6 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.22em] text-white/85"
+                    >
+                        <span class="h-px w-8 bg-secondary"></span>
+                        Contact / Begin Your Journey
+                    </div>
+
+                    <h1
+                        class="max-w-3xl font-display text-5xl font-semibold leading-[0.94] tracking-tight text-white sm:text-6xl md:text-7xl lg:text-[5.6rem]"
+                    >
+                        Your journey
+                        <span class="block">
+                            begins here<span class="text-secondary">.</span>
+                        </span>
+                    </h1>
+
+                    <p
+                        class="mt-7 max-w-xl text-base leading-8 text-white/85 sm:text-lg"
+                    >
+                        Tell us where you want to go, how you like to travel,
+                        and what you want to discover. We will help shape a
+                        thoughtful journey through Georgia around you.
+                    </p>
+
+                    <div class="mt-9 flex flex-wrap gap-4">
+
+                        <a
+                            href="#inquiry"
+                            class="inline-flex min-h-12 items-center gap-3 rounded-full bg-primary px-6 py-3 text-sm font-semibold uppercase tracking-wide text-white shadow-card transition duration-300 hover:-translate-y-1 hover:bg-primary-light"
+                        >
+                            Start an Inquiry
+
+                            <svg
+                                class="h-4 w-4"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <path d="M5 12h14"></path>
+                                <path d="m13 6 6 6-6 6"></path>
+                            </svg>
+                        </a>
+
+                        <a
+                            href="#contact-details"
+                            class="inline-flex min-h-12 items-center rounded-full border border-white/40 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur-md transition hover:bg-white/20"
+                        >
+                            Contact Details
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Floating Hero Location Card -->
+            <div
+                class="absolute bottom-8 right-6 z-20 hidden w-72 rounded-card border border-white/20 bg-white/15 p-5 text-white shadow-floating backdrop-blur-xl xl:block"
+            >
+                <div class="text-[11px] font-bold uppercase tracking-[0.18em] text-secondary-light">
+                    Current Focus
+                </div>
+
+                <div class="mt-3 font-display text-2xl font-semibold">
+                    The Greater Caucasus
+                </div>
+
+                <div class="mt-3 flex items-center gap-2 text-sm text-white/75">
+                    <svg
+                        class="h-4 w-4"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                    >
+                        <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path>
+                        <circle cx="12" cy="10" r="2.5"></circle>
+                    </svg>
+
+                    Georgia · Caucasus
+                </div>
+            </div>
+        </section>
+
+        <!-- Intro / Travel Philosophy -->
+        <section class="border-b border-earth-200 bg-earth-100">
+            <div
+                class="mx-auto grid max-w-wide gap-10 px-5 py-12 sm:px-8 md:grid-cols-[0.75fr_2fr] md:items-center md:py-16 lg:px-12"
+            >
+                <div class="flex items-center gap-5">
+
+                    <div
+                        class="grid h-16 w-16 shrink-0 place-items-center rounded-full border border-primary/20 text-primary"
+                    >
+                        <svg
+                            class="h-8 w-8"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                        >
+                            <circle cx="12" cy="12" r="9"></circle>
+                            <path d="m15.5 8.5-2.1 4.9-4.9 2.1 2.1-4.9 4.9-2.1Z"></path>
+                        </svg>
+                    </div>
+
+                    <div>
+                        <div
+                            class="text-xs font-bold uppercase tracking-[0.18em] text-secondary-dark"
+                        >
+                            Start Here
+                        </div>
+
+                        <p class="mt-2 text-sm leading-6 text-earth-700">
+                            A conversation before an itinerary.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div
+                    class="grid gap-8 border-t border-earth-300 pt-8 md:grid-cols-[1.5fr_1fr] md:border-l md:border-t-0 md:pl-10 md:pt-0"
+                >
+                    <h2
+                        class="font-display text-4xl font-semibold leading-tight text-primary-dark lg:text-5xl"
+                    >
+                        Travel deeper, slower,
+                        <span class="text-secondary-dark">and more meaningfully.</span>
+                    </h2>
+
+                    <p class="self-end leading-7 text-earth-700">
+                        From mountain villages to vineyards, forests, ancient
+                        towns and remote valleys, every Savalo itinerary begins
+                        with your interests rather than a predefined package.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Contact / Inquiry Section -->
+        <section
+            id="inquiry"
+            class="relative overflow-hidden bg-earth-50 py-20 lg:py-28"
+        >
+            <!-- Decorative Botanical Element -->
+            <svg
+                class="pointer-events-none absolute -right-16 bottom-0 hidden h-[520px] w-[360px] text-primary opacity-[0.07] lg:block"
+                viewBox="0 0 200 400"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.3"
+                aria-hidden="true"
+            >
+                <path d="M100 400C98 304 94 220 112 136C122 89 135 45 158 8"></path>
+                <path d="M108 186C74 167 50 143 35 108"></path>
+                <path d="M110 160C142 141 162 112 173 80"></path>
+                <path d="M103 243C73 228 48 205 27 175"></path>
+                <path d="M105 218C138 198 163 170 178 138"></path>
+                <path d="M100 306C71 289 47 266 30 236"></path>
+                <path d="M102 280C137 263 162 239 180 205"></path>
+            </svg>
+
+            <div
+                class="relative z-10 mx-auto grid max-w-wide gap-12 px-5 sm:px-8 lg:grid-cols-[0.82fr_1.35fr] lg:gap-16 lg:px-12 xl:gap-24"
+            >
+
+                <!-- Contact Information -->
+                <aside
+                    id="contact-details"
+                    class="lg:sticky lg:top-28 lg:self-start"
+                >
+                    <div
+                        class="text-xs font-bold uppercase tracking-[0.2em] text-secondary-dark"
+                    >
+                        Travel Office
+                    </div>
+
+                    <h2
+                        class="mt-3 max-w-md font-display text-4xl font-semibold leading-tight text-primary-dark sm:text-5xl"
+                    >
+                        Meet us in Tbilisi.
+                    </h2>
+
+                    <p class="mt-5 max-w-md leading-7 text-earth-700">
+                        Whether you are planning your first journey through
+                        Georgia or returning to explore somewhere more remote,
+                        our team is here to help build the right route.
+                    </p>
+
+                    <!-- Contact Rows -->
+                    <div class="mt-10 border-y border-earth-200">
+
+                        <div class="flex gap-4 border-b border-earth-200 py-6">
+                            <div
+                                class="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-primary/5 text-primary"
+                            >
+                                <svg
+                                    class="h-5 w-5"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.8"
+                                >
+                                    <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path>
+                                    <circle cx="12" cy="10" r="2.5"></circle>
+                                </svg>
+                            </div>
+
+                            <div>
+                                <div
+                                    class="text-[11px] font-bold uppercase tracking-[0.14em] text-earth-700"
+                                >
+                                    Headquarters
+                                </div>
+
+                                <div class="mt-1 font-medium text-earth-900">
+                                    Tbilisi, Georgia
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 border-b border-earth-200 py-6">
+                            <div
+                                class="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-primary/5 text-primary"
+                            >
+                                <svg
+                                    class="h-5 w-5"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.8"
+                                >
+                                    <path d="M4 6h16v12H4z"></path>
+                                    <path d="m4 7 8 6 8-6"></path>
+                                </svg>
+                            </div>
+
+                            <div>
+                                <div
+                                    class="text-[11px] font-bold uppercase tracking-[0.14em] text-earth-700"
+                                >
+                                    Email
+                                </div>
+
+                                <a
+                                    href="mailto:hello@savalo.ge"
+                                    class="mt-1 block font-medium text-earth-900 transition hover:text-primary"
+                                >
+                                    hello@savalo.ge
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 border-b border-earth-200 py-6">
+                            <div
+                                class="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-primary/5 text-primary"
+                            >
+                                <svg
+                                    class="h-5 w-5"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.8"
+                                >
+                                    <path d="M6 3h4l2 5-3 2c1.4 3 3.6 5.2 6.6 6.6l2-3 5 2v4c0 1.1-.9 2-2 2C11 21.6 2.4 13 2.4 3.4c0-1.1.9-2 2-2H6"></path>
+                                </svg>
+                            </div>
+
+                            <div>
+                                <div
+                                    class="text-[11px] font-bold uppercase tracking-[0.14em] text-earth-700"
+                                >
+                                    Phone / WhatsApp
+                                </div>
+
+                                <a
+                                    href="tel:+995555223344"
+                                    class="mt-1 block font-medium text-earth-900 transition hover:text-primary"
+                                >
+                                    +995 555 22 33 44
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 py-6">
+                            <div
+                                class="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-primary/5 text-primary"
+                            >
+                                <svg
+                                    class="h-5 w-5"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.8"
+                                >
+                                    <circle cx="12" cy="12" r="9"></circle>
+                                    <path d="M12 7v5l3 2"></path>
+                                </svg>
+                            </div>
+
+                            <div>
+                                <div
+                                    class="text-[11px] font-bold uppercase tracking-[0.14em] text-earth-700"
+                                >
+                                    Office Hours
+                                </div>
+
+                                <div class="mt-1 font-medium text-earth-900">
+                                    Monday — Friday
+                                </div>
+
+                                <div class="text-sm text-earth-700">
+                                    09:00 — 18:00
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Map -->
+                    <div class="mt-10">
+
+                        <div
+                            class="mb-4 flex items-center justify-between gap-4"
+                        >
+                            <div>
+                                <div
+                                    class="text-xs font-bold uppercase tracking-[0.18em] text-secondary-dark"
+                                >
+                                    Find Our Location
+                                </div>
+
+                                <p class="mt-2 text-sm leading-6 text-earth-700">
+                                    Tbilisi is the starting point for many of
+                                    our journeys across Georgia.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="overflow-hidden rounded-card border border-earth-200 bg-white shadow-soft"
+                        >
+                            <iframe
+                                title="Savalo Tbilisi Office Location"
+                                src="https://www.google.com/maps?q=Tbilisi%20Georgia&output=embed"
+                                class="h-64 w-full border-0 grayscale-[20%]"
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                            ></iframe>
+                        </div>
+
+                        <a
+                            href="https://www.google.com/maps/search/?api=1&query=Tbilisi+Georgia"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="mt-4 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.12em] text-primary underline decoration-primary/30 underline-offset-4 transition hover:text-primary-dark"
+                        >
+                            Open in Google Maps
+
+                            <svg
+                                class="h-3.5 w-3.5"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <path d="M14 3h7v7"></path>
+                                <path d="M10 14 21 3"></path>
+                                <path d="M21 14v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h6"></path>
+                            </svg>
+                        </a>
+
+                    </div>
+                </aside>
+
+                <!-- Form Card -->
+                <section
+                    class="relative rounded-[1.75rem] border border-earth-200 bg-white p-6 shadow-card sm:p-8 lg:p-10 xl:p-12"
+                    aria-labelledby="inquiry-title"
+                >
+                    <!-- Decorative Label -->
+                    <div
+                        class="absolute right-8 top-8 hidden rounded-full border border-primary/10 bg-primary/5 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.16em] text-primary lg:block"
+                    >
+                        Personalized Travel Planning
+                    </div>
+
+                    <div class="max-w-xl">
+                        <div
+                            class="text-xs font-bold uppercase tracking-[0.2em] text-secondary-dark"
+                        >
+                            Travel Inquiry
+                        </div>
+
+                        <h2
+                            id="inquiry-title"
+                            class="mt-3 font-display text-4xl font-semibold leading-tight text-primary-dark sm:text-5xl"
+                        >
+                            Tell us about your trip.
+                        </h2>
+
+                        <p class="mt-4 leading-7 text-earth-700">
+                            Share the essentials below. The more context you
+                            provide, the more thoughtfully we can shape your
+                            itinerary.
+                        </p>
+                    </div>
+
+                    <form
+                        id="travelForm"
+                        class="mt-10 space-y-7"
+                        novalidate
+                    >
+
+                        <!-- Name & Email -->
+                        <div class="grid gap-6 md:grid-cols-2">
+
+                            <div>
+                                <label
+                                    for="fullName"
+                                    class="mb-2 block text-xs font-bold uppercase tracking-[0.12em] text-earth-900"
+                                >
+                                    Full Name
+                                    <span class="text-error">*</span>
+                                </label>
+
+                                <input
+                                    id="fullName"
+                                    name="fullName"
+                                    type="text"
+                                    autocomplete="name"
+                                    placeholder="Your full name"
+                                    required
+                                    class="w-full rounded-xl border border-earth-300 bg-earth-50 px-4 py-3.5 text-sm text-earth-900 outline-none transition placeholder:text-earth-700/60 hover:border-earth-500 focus:border-primary focus:bg-white focus:ring-4 focus:ring-primary/10"
+                                >
+
+                                <p
+                                    id="fullNameError"
+                                    class="mt-2 hidden text-xs font-medium text-error"
+                                >
+                                    Please enter your full name.
+                                </p>
+                            </div>
+
+                            <div>
+                                <label
+                                    for="email"
+                                    class="mb-2 block text-xs font-bold uppercase tracking-[0.12em] text-earth-900"
+                                >
+                                    Email Address
+                                    <span class="text-error">*</span>
+                                </label>
+
+                                <input
+                                    id="email"
+                                    name="email"
+                                    type="email"
+                                    autocomplete="email"
+                                    placeholder="you@example.com"
+                                    required
+                                    class="w-full rounded-xl border border-earth-300 bg-earth-50 px-4 py-3.5 text-sm text-earth-900 outline-none transition placeholder:text-earth-700/60 hover:border-earth-500 focus:border-primary focus:bg-white focus:ring-4 focus:ring-primary/10"
+                                >
+
+                                <p
+                                    id="emailError"
+                                    class="mt-2 hidden text-xs font-medium text-error"
+                                >
+                                    Please enter a valid email address.
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <!-- Phone & Country -->
+                        <div class="grid gap-6 md:grid-cols-2">
+
+                            <div>
+                                <label
+                                    for="phone"
+                                    class="mb-2 block text-xs font-bold uppercase tracking-[0.12em] text-earth-900"
+                                >
+                                    Phone / WhatsApp
+                                </label>
+
+                                <input
+                                    id="phone"
+                                    name="phone"
+                                    type="tel"
+                                    autocomplete="tel"
+                                    placeholder="+995 555 000 000"
+                                    class="w-full rounded-xl border border-earth-300 bg-earth-50 px-4 py-3.5 text-sm text-earth-900 outline-none transition placeholder:text-earth-700/60 hover:border-earth-500 focus:border-primary focus:bg-white focus:ring-4 focus:ring-primary/10"
+                                >
+                            </div>
+
+                            <div>
+                                <label
+                                    for="country"
+                                    class="mb-2 block text-xs font-bold uppercase tracking-[0.12em] text-earth-900"
+                                >
+                                    Country of Origin
+                                    <span class="text-error">*</span>
+                                </label>
+
+                                <input
+                                    id="country"
+                                    name="country"
+                                    type="text"
+                                    autocomplete="country-name"
+                                    placeholder="e.g. Germany"
+                                    required
+                                    class="w-full rounded-xl border border-earth-300 bg-earth-50 px-4 py-3.5 text-sm text-earth-900 outline-none transition placeholder:text-earth-700/60 hover:border-earth-500 focus:border-primary focus:bg-white focus:ring-4 focus:ring-primary/10"
+                                >
+
+                                <p
+                                    id="countryError"
+                                    class="mt-2 hidden text-xs font-medium text-error"
+                                >
+                                    Please enter your country.
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <!-- Destination -->
+                        <div>
+                            <label
+                                for="destination"
+                                class="mb-2 block text-xs font-bold uppercase tracking-[0.12em] text-earth-900"
+                            >
+                                Destination / Tour Package
+                                <span class="text-error">*</span>
+                            </label>
+
+                            <div class="relative">
+                                <select
+                                    id="destination"
+                                    name="destination"
+                                    required
+                                    class="w-full appearance-none rounded-xl border border-earth-300 bg-earth-50 px-4 py-3.5 pr-12 text-sm text-earth-900 outline-none transition hover:border-earth-500 focus:border-primary focus:bg-white focus:ring-4 focus:ring-primary/10"
+                                >
+                                    <option value="">
+                                        Select a destination or experience
+                                    </option>
+
+                                    <option value="kazbegi">
+                                        Kazbegi & Greater Caucasus
+                                    </option>
+
+                                    <option value="kakheti">
+                                        Kakheti Wine Region
+                                    </option>
+
+                                    <option value="svaneti">
+                                        Svaneti Mountain Journey
+                                    </option>
+
+                                    <option value="vashlovani">
+                                        Vashlovani & Eastern Georgia
+                                    </option>
+
+                                    <option value="adjara">
+                                        Adjara & Black Sea Highlands
+                                    </option>
+
+                                    <option value="custom">
+                                        Fully Customized Georgia Journey
+                                    </option>
+                                </select>
+
+                                <svg
+                                    class="pointer-events-none absolute right-4 top-1/2 h-4 w-4 -translate-y-1/2 text-primary"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                >
+                                    <path d="m6 9 6 6 6-6"></path>
+                                </svg>
+                            </div>
+
+                            <p
+                                id="destinationError"
+                                class="mt-2 hidden text-xs font-medium text-error"
+                            >
+                                Please choose a destination or tour package.
+                            </p>
+                        </div>
+
+                        <!-- Visual Destination Options -->
+                        <div class="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+
+                            <button
+                                type="button"
+                                data-destination="kazbegi"
+                                class="destination-option group rounded-2xl border border-earth-200 bg-earth-50 p-4 text-left transition hover:-translate-y-1 hover:border-alpine hover:bg-white hover:shadow-soft"
+                            >
+                                <div
+                                    class="mb-3 grid h-9 w-9 place-items-center rounded-full bg-alpine/10 text-alpine"
+                                >
+                                    <svg
+                                        class="h-5 w-5"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.6"
+                                    >
+                                        <path d="m3 19 6-10 4 6 3-5 5 9H3Z"></path>
+                                    </svg>
+                                </div>
+
+                                <div class="text-sm font-semibold text-earth-900">
+                                    Kazbegi
+                                </div>
+
+                                <div class="mt-1 text-xs text-earth-700">
+                                    Alpine
+                                </div>
+                            </button>
+
+                            <button
+                                type="button"
+                                data-destination="kakheti"
+                                class="destination-option group rounded-2xl border border-earth-200 bg-earth-50 p-4 text-left transition hover:-translate-y-1 hover:border-secondary hover:bg-white hover:shadow-soft"
+                            >
+                                <div
+                                    class="mb-3 grid h-9 w-9 place-items-center rounded-full bg-secondary/15 text-secondary-dark"
+                                >
+                                    <svg
+                                        class="h-5 w-5"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.6"
+                                    >
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                        <path d="M12 2v3M12 19v3M4.9 4.9 7 7M17 17l2.1 2.1M2 12h3M19 12h3M4.9 19.1 7 17M17 7l2.1-2.1"></path>
+                                    </svg>
+                                </div>
+
+                                <div class="text-sm font-semibold text-earth-900">
+                                    Kakheti
+                                </div>
+
+                                <div class="mt-1 text-xs text-earth-700">
+                                    Wine Country
+                                </div>
+                            </button>
+
+                            <button
+                                type="button"
+                                data-destination="svaneti"
+                                class="destination-option group rounded-2xl border border-earth-200 bg-earth-50 p-4 text-left transition hover:-translate-y-1 hover:border-primary hover:bg-white hover:shadow-soft"
+                            >
+                                <div
+                                    class="mb-3 grid h-9 w-9 place-items-center rounded-full bg-primary/10 text-primary"
+                                >
+                                    <svg
+                                        class="h-5 w-5"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.6"
+                                    >
+                                        <path d="M5 20V9l7-5 7 5v11"></path>
+                                        <path d="M8 20v-5h8v5"></path>
+                                    </svg>
+                                </div>
+
+                                <div class="text-sm font-semibold text-earth-900">
+                                    Svaneti
+                                </div>
+
+                                <div class="mt-1 text-xs text-earth-700">
+                                    High Mountains
+                                </div>
+                            </button>
+
+                            <button
+                                type="button"
+                                data-destination="custom"
+                                class="destination-option group rounded-2xl border border-earth-200 bg-earth-50 p-4 text-left transition hover:-translate-y-1 hover:border-rainforest hover:bg-white hover:shadow-soft"
+                            >
+                                <div
+                                    class="mb-3 grid h-9 w-9 place-items-center rounded-full bg-rainforest/10 text-rainforest"
+                                >
+                                    <svg
+                                        class="h-5 w-5"
+                                        viewBox="0 0 24 24"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="1.6"
+                                    >
+                                        <path d="M4 20c6-1 11-6 12-12 2 4 3 8 2 12"></path>
+                                        <path d="M4 20c0-5 2-9 7-13"></path>
+                                    </svg>
+                                </div>
+
+                                <div class="text-sm font-semibold text-earth-900">
+                                    Custom
+                                </div>
+
+                                <div class="mt-1 text-xs text-earth-700">
+                                    Tailor-Made
+                                </div>
+                            </button>
+
+                        </div>
+
+                        <!-- Travel Dates -->
+                        <fieldset>
+                            <legend
+                                class="mb-2 block text-xs font-bold uppercase tracking-[0.12em] text-earth-900"
+                            >
+                                Travel Dates
+                                <span class="text-error">*</span>
+                            </legend>
+
+                            <div class="grid gap-6 md:grid-cols-2">
+
+                                <div>
+                                    <label
+                                        for="arrivalDate"
+                                        class="mb-2 block text-xs font-medium text-earth-700"
+                                    >
+                                        Arrival
+                                    </label>
+
+                                    <input
+                                        id="arrivalDate"
+                                        name="arrivalDate"
+                                        type="date"
+                                        required
+                                        class="w-full rounded-xl border border-earth-300 bg-earth-50 px-4 py-3.5 text-sm text-earth-900 outline-none transition hover:border-earth-500 focus:border-primary focus:bg-white focus:ring-4 focus:ring-primary/10"
+                                    >
+                                </div>
+
+                                <div>
+                                    <label
+                                        for="departureDate"
+                                        class="mb-2 block text-xs font-medium text-earth-700"
+                                    >
+                                        Departure
+                                    </label>
+
+                                    <input
+                                        id="departureDate"
+                                        name="departureDate"
+                                        type="date"
+                                        required
+                                        class="w-full rounded-xl border border-earth-300 bg-earth-50 px-4 py-3.5 text-sm text-earth-900 outline-none transition hover:border-earth-500 focus:border-primary focus:bg-white focus:ring-4 focus:ring-primary/10"
+                                    >
+                                </div>
+
+                            </div>
+
+                            <p
+                                id="dateError"
+                                class="mt-2 hidden text-xs font-medium text-error"
+                            >
+                                Please provide valid travel dates.
+                            </p>
+                        </fieldset>
+
+                        <!-- Number of Travelers -->
+                        <div>
+                            <label
+                                for="travelers"
+                                class="mb-2 block text-xs font-bold uppercase tracking-[0.12em] text-earth-900"
+                            >
+                                Number of Travelers
+                                <span class="text-error">*</span>
+                            </label>
+
+                            <input
+                                id="travelers"
+                                name="travelers"
+                                type="number"
+                                min="1"
+                                max="30"
+                                value="2"
+                                required
+                                class="w-full rounded-xl border border-earth-300 bg-earth-50 px-4 py-3.5 text-sm text-earth-900 outline-none transition hover:border-earth-500 focus:border-primary focus:bg-white focus:ring-4 focus:ring-primary/10"
+                            >
+
+                            <p
+                                id="travelersError"
+                                class="mt-2 hidden text-xs font-medium text-error"
+                            >
+                                Please enter at least one traveler.
+                            </p>
+                        </div>
+
+                        <!-- Special Requests -->
+                        <div>
+                            <label
+                                for="requests"
+                                class="mb-2 block text-xs font-bold uppercase tracking-[0.12em] text-earth-900"
+                            >
+                                Special Requests
+                            </label>
+
+                            <textarea
+                                id="requests"
+                                name="requests"
+                                rows="6"
+                                placeholder="Tell us what you would love to experience, your preferred pace, interests, accommodation style, dietary needs, or anything else we should know..."
+                                class="w-full resize-y rounded-xl border border-earth-300 bg-earth-50 px-4 py-4 text-sm leading-6 text-earth-900 outline-none transition placeholder:text-earth-700/60 hover:border-earth-500 focus:border-primary focus:bg-white focus:ring-4 focus:ring-primary/10"
+                            ></textarea>
+                        </div>
+
+                        <!-- Privacy -->
+                        <label
+                            class="flex cursor-pointer items-start gap-3 rounded-xl bg-earth-50 p-4"
+                        >
+                            <input
+                                id="privacy"
+                                name="privacy"
+                                type="checkbox"
+                                required
+                                class="mt-1 h-4 w-4 rounded border-earth-300 text-primary focus:ring-primary"
+                            >
+
+                            <span class="text-xs leading-5 text-earth-700">
+                                I agree that Savalo may use the information above
+                                to respond to my travel inquiry. My information
+                                will not be sold or used for unrelated marketing.
+                            </span>
+                        </label>
+
+                        <p
+                            id="privacyError"
+                            class="-mt-4 hidden text-xs font-medium text-error"
+                        >
+                            Please confirm that you agree to the privacy terms.
+                        </p>
+
+                        <!-- Submit Button -->
+                        <button
+                            id="submitButton"
+                            type="submit"
+                            class="group flex min-h-14 w-full items-center justify-center gap-3 rounded-xl bg-primary px-6 py-4 text-sm font-bold uppercase tracking-[0.08em] text-white shadow-soft transition duration-300 hover:-translate-y-0.5 hover:bg-primary-dark hover:shadow-card focus:outline-none focus:ring-4 focus:ring-primary/20"
+                        >
+                            Send Travel Inquiry
+
+                            <svg
+                                class="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                            >
+                                <path d="m3 11 18-8-8 18-2-8-8-2Z"></path>
+                                <path d="M11 13 21 3"></path>
+                            </svg>
+                        </button>
+
+                        <div
+                            class="flex items-start gap-3 text-xs leading-5 text-earth-700"
+                        >
+                            <svg
+                                class="mt-0.5 h-4 w-4 shrink-0 text-primary"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                            >
+                                <path d="M12 3 5 6v5c0 5 3 8 7 10 4-2 7-5 7-10V6l-7-3Z"></path>
+                                <path d="m9 12 2 2 4-4"></path>
+                            </svg>
+
+                            Your inquiry is used only to prepare and discuss your
+                            travel proposal.
+                        </div>
+
+                    </form>
+
+                    <!-- Success State -->
+                    <div
+                        id="successState"
+                        class="hidden py-14 text-center"
+                        role="status"
+                        aria-live="polite"
+                    >
+                        <div
+                            class="mx-auto grid h-16 w-16 place-items-center rounded-full bg-success text-white shadow-soft"
+                        >
+                            <svg
+                                class="h-8 w-8"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <path d="m5 12 4 4L19 6"></path>
+                            </svg>
+                        </div>
+
+                        <div
+                            class="mt-8 text-xs font-bold uppercase tracking-[0.2em] text-secondary-dark"
+                        >
+                            Inquiry Received
+                        </div>
+
+                        <h3
+                            class="mx-auto mt-3 max-w-lg font-display text-4xl font-semibold leading-tight text-primary-dark sm:text-5xl"
+                        >
+                            Your journey is taking shape.
+                        </h3>
+
+                        <p
+                            class="mx-auto mt-5 max-w-lg leading-7 text-earth-700"
+                        >
+                            Thank you for contacting Savalo. Our travel team will
+                            review your preferences and follow up with the next
+                            steps for your personalized journey.
+                        </p>
+
+                        <div
+                            class="mx-auto mt-8 max-w-md rounded-2xl border border-success/20 bg-success/5 p-5"
+                        >
+                            <div
+                                class="text-[11px] font-bold uppercase tracking-[0.16em] text-success"
+                            >
+                                Inquiry Status
+                            </div>
+
+                            <div
+                                class="mt-1 text-lg font-semibold text-earth-900"
+                            >
+                                Received
+                            </div>
+                        </div>
+
+                        <a
+                            href="tours.html"
+                            class="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white transition hover:bg-primary-dark"
+                        >
+                            Explore Tours
+
+                            <svg
+                                class="h-4 w-4"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <path d="M5 12h14"></path>
+                                <path d="m13 6 6 6-6 6"></path>
+                            </svg>
+                        </a>
+                    </div>
+
+                </section>
+            </div>
+        </section>
+
+        <!-- Editorial Mission Strip -->
+        <section class="overflow-hidden bg-earth-100">
+            <div
+                class="mx-auto grid max-w-wide lg:grid-cols-[0.92fr_1.08fr]"
+            >
+                <div class="relative min-h-[400px] lg:min-h-[500px]">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=85"
+                        alt="Travelers exploring a natural landscape"
+                        class="absolute inset-0 h-full w-full object-cover"
+                    >
+
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-primary-dark/45 to-transparent"
+                    ></div>
+
+                    <div
+                        class="absolute bottom-7 left-7 rounded-full border border-white/30 bg-white/15 px-4 py-2 text-[10px] font-bold uppercase tracking-[0.16em] text-white backdrop-blur-md"
+                    >
+                        Travel with intention
+                    </div>
+                </div>
+
+                <div
+                    class="flex items-center px-5 py-14 sm:px-8 lg:px-16 lg:py-20 xl:px-20"
+                >
+                    <div class="max-w-xl">
+
+                        <div
+                            class="text-xs font-bold uppercase tracking-[0.2em] text-secondary-dark"
+                        >
+                            Your Journey. Our Craft.
+                        </div>
+
+                        <h2
+                            class="mt-4 font-display text-4xl font-semibold leading-tight text-primary-dark sm:text-5xl"
+                        >
+                            Built around people,
+                            not packages.
+                        </h2>
+
+                        <p class="mt-6 leading-8 text-earth-700">
+                            The best journeys are not a sequence of attractions.
+                            They are carefully paced experiences shaped by
+                            landscapes, conversations, food, local knowledge,
+                            and enough time to actually notice where you are.
+                        </p>
+
+                        <a
+                            href="about.html"
+                            class="mt-8 inline-flex items-center gap-3 text-sm font-bold uppercase tracking-[0.08em] text-primary"
+                        >
+                            Learn About Savalo
+
+                            <svg
+                                class="h-4 w-4"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <path d="M5 12h14"></path>
+                                <path d="m13 6 6 6-6 6"></path>
+                            </svg>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary-dark text-white">
+        <div
+            class="mx-auto grid max-w-wide gap-12 px-5 py-14 sm:px-8 md:grid-cols-2 lg:grid-cols-[1.3fr_0.8fr_0.9fr_1fr] lg:px-12 lg:py-16"
+        >
+
+            <div>
+                <a href="index.html" class="inline-flex items-center gap-3">
+
+                    <div
+                        class="grid h-11 w-11 place-items-center rounded-full border border-white/20"
+                    >
+                        <svg
+                            viewBox="0 0 48 48"
+                            class="h-7 w-7"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M6 34L17 17L24 27L31 13L42 34H6Z"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                    </div>
+
+                    <div>
+                        <div class="font-display text-3xl font-semibold leading-none">
+                            Savalo
+                        </div>
+
+                        <div
+                            class="mt-1 text-[9px] uppercase tracking-[0.2em] text-white/60"
+                        >
+                            Travel Georgia
+                        </div>
+                    </div>
+
+                </a>
+
+                <p class="mt-6 max-w-xs text-sm leading-6 text-white/65">
+                    Thoughtful journeys across Georgia, created around place,
+                    culture, landscape and curiosity.
+                </p>
+            </div>
+
+            <div>
+                <h3
+                    class="text-xs font-bold uppercase tracking-[0.15em] text-secondary-light"
+                >
+                    Navigation
+                </h3>
+
+                <ul class="mt-5 space-y-3 text-sm text-white/70">
+                    <li>
+                        <a href="index.html" class="transition hover:text-white">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="tours.html" class="transition hover:text-white">
+                            Tours
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="destinations.html" class="transition hover:text-white">
+                            Destinations
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html" class="transition hover:text-white">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html" class="transition hover:text-white">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h3
+                    class="text-xs font-bold uppercase tracking-[0.15em] text-secondary-light"
+                >
+                    Experiences
+                </h3>
+
+                <ul class="mt-5 space-y-3 text-sm text-white/70">
+                    <li>Kazbegi & Caucasus</li>
+                    <li>Svaneti Mountains</li>
+                    <li>Kakheti Wine Region</li>
+                    <li>Eastern Georgia</li>
+                    <li>Custom Journeys</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3
+                    class="text-xs font-bold uppercase tracking-[0.15em] text-secondary-light"
+                >
+                    Get in Touch
+                </h3>
+
+                <div class="mt-5 space-y-4 text-sm text-white/70">
+
+                    <a
+                        href="mailto:hello@savalo.ge"
+                        class="flex items-center gap-3 transition hover:text-white"
+                    >
+                        <svg
+                            class="h-4 w-4"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                        >
+                            <path d="M4 6h16v12H4z"></path>
+                            <path d="m4 7 8 6 8-6"></path>
+                        </svg>
+
+                        hello@savalo.ge
+                    </a>
+
+                    <a
+                        href="tel:+995555223344"
+                        class="flex items-center gap-3 transition hover:text-white"
+                    >
+                        <svg
+                            class="h-4 w-4"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                        >
+                            <path d="M6 3h4l2 5-3 2c1.4 3 3.6 5.2 6.6 6.6l2-3 5 2v4c0 1.1-.9 2-2 2C11 21.6 2.4 13 2.4 3.4c0-1.1.9-2 2-2H6"></path>
+                        </svg>
+
+                        +995 555 22 33 44
+                    </a>
+
+                    <div class="flex items-start gap-3">
+                        <svg
+                            class="mt-0.5 h-4 w-4 shrink-0"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.8"
+                        >
+                            <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path>
+                            <circle cx="12" cy="10" r="2.5"></circle>
+                        </svg>
+
+                        Tbilisi, Georgia
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="border-t border-white/10">
+            <div
+                class="mx-auto flex max-w-wide flex-col gap-4 px-5 py-6 text-xs text-white/45 sm:px-8 md:flex-row md:items-center md:justify-between lg:px-12"
+            >
+                <p>
+                    © 2026 Savalo. All rights reserved.
+                </p>
+
+                <div class="flex gap-6">
+                    <a href="#" class="transition hover:text-white">
+                        Privacy Policy
+                    </a>
+
+                    <a href="#" class="transition hover:text-white">
+                        Terms of Use
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Vanilla JavaScript -->
+    <script>
+        /* =====================================================
+           Mobile Navigation
+        ===================================================== */
+
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        menuToggle.addEventListener('click', () => {
+            const isOpen = !mobileMenu.classList.contains('hidden');
+
+            mobileMenu.classList.toggle('hidden');
+
+            menuToggle.setAttribute(
+                'aria-expanded',
+                String(!isOpen)
+            );
+        });
+
+
+        /* =====================================================
+           Destination Quick Selection
+        ===================================================== */
+
+        const destinationSelect =
+            document.getElementById('destination');
+
+        const destinationButtons =
+            document.querySelectorAll('.destination-option');
+
+        destinationButtons.forEach((button) => {
+
+            button.addEventListener('click', () => {
+
+                const destination =
+                    button.dataset.destination;
+
+                destinationSelect.value =
+                    destination;
+
+                destinationButtons.forEach((item) => {
+                    item.classList.remove(
+                        'border-primary',
+                        'bg-primary/5',
+                        'ring-2',
+                        'ring-primary/10'
+                    );
+                });
+
+                button.classList.add(
+                    'border-primary',
+                    'bg-primary/5',
+                    'ring-2',
+                    'ring-primary/10'
+                );
+
+                destinationSelect.dispatchEvent(
+                    new Event('change')
+                );
+            });
+
+        });
+
+
+        /* =====================================================
+           Form Validation
+        ===================================================== */
+
+        const form =
+            document.getElementById('travelForm');
+
+        const successState =
+            document.getElementById('successState');
+
+        const submitButton =
+            document.getElementById('submitButton');
+
+        const fields = {
+            fullName: document.getElementById('fullName'),
+            email: document.getElementById('email'),
+            country: document.getElementById('country'),
+            destination: document.getElementById('destination'),
+            arrivalDate: document.getElementById('arrivalDate'),
+            departureDate: document.getElementById('departureDate'),
+            travelers: document.getElementById('travelers'),
+            privacy: document.getElementById('privacy')
+        };
+
+        const errorElements = {
+            fullName: document.getElementById('fullNameError'),
+            email: document.getElementById('emailError'),
+            country: document.getElementById('countryError'),
+            destination: document.getElementById('destinationError'),
+            date: document.getElementById('dateError'),
+            travelers: document.getElementById('travelersError'),
+            privacy: document.getElementById('privacyError')
+        };
+
+        const invalidClasses = [
+            'border-error',
+            'bg-red-50',
+            'focus:border-error',
+            'focus:ring-error/10'
+        ];
+
+        function setFieldInvalid(field, errorElement) {
+
+            invalidClasses.forEach((className) => {
+                field.classList.add(className);
+            });
+
+            field.setAttribute(
+                'aria-invalid',
+                'true'
+            );
+
+            errorElement.classList.remove('hidden');
+        }
+
+        function setFieldValid(field, errorElement) {
+
+            invalidClasses.forEach((className) => {
+                field.classList.remove(className);
+            });
+
+            field.removeAttribute('aria-invalid');
+
+            if (errorElement) {
+                errorElement.classList.add('hidden');
+            }
+        }
+
+        function validateEmail(value) {
+
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(
+                value
+            );
+        }
+
+        function validateField(fieldName) {
+
+            switch (fieldName) {
+
+                case 'fullName': {
+
+                    const valid =
+                        fields.fullName.value.trim().length >= 2;
+
+                    valid
+                        ? setFieldValid(
+                            fields.fullName,
+                            errorElements.fullName
+                        )
+                        : setFieldInvalid(
+                            fields.fullName,
+                            errorElements.fullName
+                        );
+
+                    return valid;
+                }
+
+                case 'email': {
+
+                    const valid =
+                        validateEmail(
+                            fields.email.value.trim()
+                        );
+
+                    valid
+                        ? setFieldValid(
+                            fields.email,
+                            errorElements.email
+                        )
+                        : setFieldInvalid(
+                            fields.email,
+                            errorElements.email
+                        );
+
+                    return valid;
+                }
+
+                case 'country': {
+
+                    const valid =
+                        fields.country.value.trim().length >= 2;
+
+                    valid
+                        ? setFieldValid(
+                            fields.country,
+                            errorElements.country
+                        )
+                        : setFieldInvalid(
+                            fields.country,
+                            errorElements.country
+                        );
+
+                    return valid;
+                }
+
+                case 'destination': {
+
+                    const valid =
+                        fields.destination.value !== '';
+
+                    valid
+                        ? setFieldValid(
+                            fields.destination,
+                            errorElements.destination
+                        )
+                        : setFieldInvalid(
+                            fields.destination,
+                            errorElements.destination
+                        );
+
+                    return valid;
+                }
+
+                case 'travelers': {
+
+                    const value =
+                        Number(fields.travelers.value);
+
+                    const valid =
+                        Number.isFinite(value) &&
+                        value > 0;
+
+                    valid
+                        ? setFieldValid(
+                            fields.travelers,
+                            errorElements.travelers
+                        )
+                        : setFieldInvalid(
+                            fields.travelers,
+                            errorElements.travelers
+                        );
+
+                    return valid;
+                }
+
+                default:
+                    return true;
+            }
+        }
+
+        [
+            'fullName',
+            'email',
+            'country',
+            'destination',
+            'travelers'
+        ].forEach((fieldName) => {
+
+            const field = fields[fieldName];
+
+            field.addEventListener(
+                'blur',
+                () => validateField(fieldName)
+            );
+
+            field.addEventListener(
+                'input',
+                () => {
+
+                    if (
+                        field.getAttribute(
+                            'aria-invalid'
+                        ) === 'true'
+                    ) {
+                        validateField(fieldName);
+                    }
+                }
+            );
+        });
+
+
+        /* =====================================================
+           Travel Date Validation
+        ===================================================== */
+
+        function validateDates() {
+
+            const arrival =
+                fields.arrivalDate.value;
+
+            const departure =
+                fields.departureDate.value;
+
+            let valid =
+                arrival !== '' &&
+                departure !== '';
+
+            if (valid) {
+
+                valid =
+                    new Date(departure) >=
+                    new Date(arrival);
+            }
+
+            if (!valid) {
+
+                setFieldInvalid(
+                    fields.arrivalDate,
+                    errorElements.date
+                );
+
+                invalidClasses.forEach((className) => {
+                    fields.departureDate.classList.add(
+                        className
+                    );
+                });
+
+            } else {
+
+                setFieldValid(
+                    fields.arrivalDate,
+                    errorElements.date
+                );
+
+                invalidClasses.forEach((className) => {
+                    fields.departureDate.classList.remove(
+                        className
+                    );
+                });
+            }
+
+            return valid;
+        }
+
+        fields.arrivalDate.addEventListener(
+            'change',
+            validateDates
+        );
+
+        fields.departureDate.addEventListener(
+            'change',
+            validateDates
+        );
+
+
+        /* =====================================================
+           Form Submission
+        ===================================================== */
+
+        form.addEventListener('submit', (event) => {
+
+            event.preventDefault();
+
+            const validations = [
+                validateField('fullName'),
+                validateField('email'),
+                validateField('country'),
+                validateField('destination'),
+                validateDates(),
+                validateField('travelers')
+            ];
+
+            if (!fields.privacy.checked) {
+
+                errorElements.privacy.classList.remove(
+                    'hidden'
+                );
+
+                validations.push(false);
+
+            } else {
+
+                errorElements.privacy.classList.add(
+                    'hidden'
+                );
+            }
+
+            const isValid =
+                validations.every(Boolean);
+
+            if (!isValid) {
+
+                const firstInvalid =
+                    form.querySelector(
+                        '[aria-invalid="true"]'
+                    );
+
+                if (firstInvalid) {
+                    firstInvalid.focus();
+                }
+
+                return;
+            }
+
+            submitButton.disabled = true;
+
+            form.classList.add(
+                'transition',
+                'duration-300',
+                'opacity-0',
+                'translate-y-2'
+            );
+
+            setTimeout(() => {
+
+                form.classList.add('hidden');
+
+                successState.classList.remove(
+                    'hidden'
+                );
+
+                successState.classList.add(
+                    'animate-[fadeIn_0.4s_ease-out]'
+                );
+
+                successState.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center'
+                });
+
+            }, 300);
+        });
+    </script>
+
+</body>
+</html>
