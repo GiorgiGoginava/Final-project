@@ -1,0 +1,105 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700">
+
+    <defs>
+        <linearGradient id="mountain" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#6FC3E8"></stop>
+            <stop offset="100%" stop-color="#2B6CB0"></stop>
+        </linearGradient>
+
+        <linearGradient id="forest" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#4F8F4F"></stop>
+            <stop offset="100%" stop-color="#1F5B34"></stop>
+        </linearGradient>
+
+        <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#7BC96F"></stop>
+            <stop offset="100%" stop-color="#2E8B57"></stop>
+        </linearGradient>
+    </defs>
+
+    <!-- Outer Circle -->
+    <circle cx="350" cy="300" r="220" fill="white" stroke="#234A34" stroke-width="14"></circle>
+
+    <!-- Mountains -->
+    <path d="M180 380
+           L300 190
+           L355 280
+           L420 170
+           L520 380
+           Z" fill="url(#mountain)"></path>
+
+    <!-- Snow -->
+    <path d="M300 190
+           L270 240
+           L300 225
+           L330 240
+           Z" fill="white"></path>
+
+    <path d="M420 170
+           L390 225
+           L420 210
+           L450 225
+           Z" fill="white"></path>
+
+    <!-- Forest -->
+    <path d="M170 380
+           C230 330 470 330 530 380
+           L530 420
+           L170 420
+           Z" fill="url(#forest)"></path>
+
+    <!-- Trees -->
+    <g fill="#17452D">
+        <polygon points="240,355 255,325 270,355"></polygon>
+        <rect x="252" y="355" width="6" height="18"></rect>
+
+        <polygon points="305,350 322,315 339,350"></polygon>
+        <rect x="319" y="350" width="6" height="20"></rect>
+
+        <polygon points="370,355 387,322 404,355"></polygon>
+        <rect x="384" y="355" width="6" height="18"></rect>
+
+        <polygon points="440,350 457,318 474,350"></polygon>
+        <rect x="454" y="350" width="6" height="20"></rect>
+    </g>
+
+    <!-- Leaf -->
+    <path d="
+        M350 275
+        C390 220 455 225 470 285
+        C480 335 435 385 350 420
+        C265 385 220 335 230 285
+        C245 225 310 220 350 275
+        Z" fill="url(#leaf)" opacity="0.92"></path>
+
+    <!-- Leaf vein -->
+    <path d="M350 275
+           L350 410" stroke="white" stroke-width="5" stroke-linecap="round"></path>
+
+    <path d="M350 320
+           L385 295" stroke="white" stroke-width="4" stroke-linecap="round"></path>
+
+    <path d="M350 345
+           L390 330" stroke="white" stroke-width="4" stroke-linecap="round"></path>
+
+    <path d="M350 320
+           L315 295" stroke="white" stroke-width="4" stroke-linecap="round"></path>
+
+    <path d="M350 345
+           L310 330" stroke="white" stroke-width="4" stroke-linecap="round"></path>
+
+    <!-- River -->
+    <path d="M350 420
+           C340 455 330 495 350 535" fill="none" stroke="#5DADE2" stroke-width="10" stroke-linecap="round"></path>
+
+    <!-- Brand -->
+    <text x="350" y="585" text-anchor="middle" font-size="34" font-family="Segoe UI, Arial, sans-serif" font-weight="700" fill="#234A34">
+        Caucasus BioSphere
+    </text>
+
+    <text x="350" y="620" text-anchor="middle" font-size="18" font-family="Segoe UI, Arial, sans-serif" letter-spacing="4" fill="#666666">
+        EXPEDITIONS
+    </text>
+
+</svg>
