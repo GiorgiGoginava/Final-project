@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us | BioCaucasus</title>
+
+    <meta
+        name="description"
+        content="Discover the mission, conservation principles, ecosystems and research team behind BioCaucasus — Caucasus BioSphere Expeditions."
+    >
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- BioCaucasus Design System -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#2E5A44',
+                            dark: '#1F4030',
+                            light: '#3F7359'
+                        },
+
+                        secondary: {
+                            DEFAULT: '#D4A373',
+                            dark: '#A87442',
+                            light: '#E2BD96'
+                        },
+
+                        glacier: {
+                            DEFAULT: '#8FBFCC',
+                            dark: '#527F8D',
+                            light: '#DCECF1'
+                        },
+
+                        background: '#F7F8F5',
+                        surface: '#FFFFFF',
+                        warm: '#F1EEE7',
+
+                        text: {
+                            primary: '#202822',
+                            secondary: '#526057',
+                            muted: '#748078'
+                        },
+
+                        border: {
+                            DEFAULT: '#DDE3DE',
+                            strong: '#BFC9C2'
+                        },
+
+                        success: '#287A4D',
+                        error: '#B94A48',
+
+                        lagodekhi: '#2E5A44',
+                        vashlovani: '#D4A373',
+                        mtirala: '#3F8062',
+                        kazbegi: '#729DB1'
+                    },
+
+                    fontFamily: {
+                        display: ['Cormorant Garamond', 'Georgia', 'serif'],
+                        body: ['Inter', 'Arial', 'sans-serif']
+                    },
+
+                    maxWidth: {
+                        site: '1400px',
+                        content: '1200px',
+                        reading: '760px'
+                    },
+
+                    borderRadius: {
+                        card: '1.25rem',
+                        panel: '1.75rem'
+                    },
+
+                    boxShadow: {
+                        soft: '0 4px 18px rgba(32,40,34,0.06)',
+                        card: '0 14px 40px rgba(32,40,34,0.09)',
+                        float: '0 24px 60px rgba(32,40,34,0.14)'
+                    }
+                }
+            }
+        };
+    </script>
+</head>
+
+<body class="bg-background font-body text-text-primary antialiased">
+
+    <!-- =========================================================
+         HEADER / NAVIGATION
+    ========================================================== -->
+    <header
+        id="siteHeader"
+        class="fixed inset-x-0 top-0 z-50 border-b border-border/70 bg-white/95 backdrop-blur-xl transition duration-300"
+    >
+        <nav
+            class="mx-auto flex h-20 max-w-site items-center justify-between px-5 sm:px-8 lg:px-12"
+            aria-label="Main navigation"
+        >
+
+            <!-- Existing BioCaucasus Logo -->
+            <a
+                href="index.html"
+                class="flex items-center"
+                aria-label="BioCaucasus Home"
+            >
+                <img
+                   src="../logo/BioCaucasus_logo_exact.svg"
+                    alt="BioCaucasus — Caucasus BioSphere Expeditions"
+                    class="h-[68px] w-auto object-contain"
+                >
+            </a>
+
+            <!-- Desktop Navigation -->
+            <div class="hidden items-center gap-8 lg:flex">
+
+                <a
+                    href="index.html"
+                    class="text-sm font-semibold text-text-secondary transition hover:text-primary"
+                >
+                    Home
+                </a>
+
+                <a
+                    href="expeditions.html"
+                    class="text-sm font-semibold text-text-secondary transition hover:text-primary"
+                >
+                    Expeditions
+                </a>
+
+                <a
+                    href="about.html"
+                    class="relative text-sm font-semibold text-primary"
+                    aria-current="page"
+                >
+                    About Us
+
+                    <span
+                        class="absolute -bottom-2 left-0 h-[2px] w-full bg-primary"
+                    ></span>
+                </a>
+
+                <a
+                    href="contact.html"
+                    class="text-sm font-semibold text-text-secondary transition hover:text-primary"
+                >
+                    Contact
+                </a>
+            </div>
+
+            <!-- Desktop CTA -->
+            <a
+                href="contact.html"
+                class="hidden rounded-lg bg-secondary px-6 py-3 text-sm font-bold uppercase tracking-[0.08em] text-primary-dark shadow-soft transition duration-300 hover:-translate-y-0.5 hover:bg-secondary-dark hover:text-white lg:inline-flex"
+            >
+                Join Now
+            </a>
+
+            <!-- Mobile Menu Toggle -->
+            <button
+                id="menuToggle"
+                type="button"
+                class="grid h-11 w-11 place-items-center rounded-full border border-border bg-white text-primary lg:hidden"
+                aria-label="Open navigation"
+                aria-controls="mobileMenu"
+                aria-expanded="false"
+            >
+                <svg
+                    class="h-5 w-5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                >
+                    <path d="M4 7h16"></path>
+                    <path d="M4 12h16"></path>
+                    <path d="M4 17h16"></path>
+                </svg>
+            </button>
+        </nav>
+
+        <!-- Mobile Navigation -->
+        <div
+            id="mobileMenu"
+            class="hidden border-t border-border bg-white px-5 py-5 lg:hidden"
+        >
+            <div class="mx-auto flex max-w-site flex-col">
+
+                <a
+                    href="index.html"
+                    class="rounded-lg px-4 py-3 text-sm font-medium hover:bg-background"
+                >
+                    Home
+                </a>
+
+                <a
+                    href="expeditions.html"
+                    class="rounded-lg px-4 py-3 text-sm font-medium hover:bg-background"
+                >
+                    Expeditions
+                </a>
+
+                <a
+                    href="about.html"
+                    class="rounded-lg bg-primary/5 px-4 py-3 text-sm font-semibold text-primary"
+                    aria-current="page"
+                >
+                    About Us
+                </a>
+
+                <a
+                    href="contact.html"
+                    class="rounded-lg px-4 py-3 text-sm font-medium hover:bg-background"
+                >
+                    Contact
+                </a>
+
+                <a
+                    href="contact.html"
+                    class="mt-4 inline-flex justify-center rounded-lg bg-secondary px-5 py-3 text-sm font-bold uppercase tracking-[0.06em] text-primary-dark"
+                >
+                    Join Now
+                </a>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- =========================================================
+             HERO SECTION
+        ========================================================== -->
+        <section
+            class="relative min-h-[760px] overflow-hidden pt-20 lg:min-h-[820px]"
+        >
+            <!-- Hero Background -->
+            <img
+                src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2400&q=90"
+                alt="Misty forest valley and rugged Caucasus mountain peaks"
+                class="absolute inset-0 h-full w-full object-cover"
+            >
+
+            <!-- Editorial Gradient -->
+            <div
+                class="absolute inset-0 bg-gradient-to-r from-[#10261b]/95 via-[#173528]/65 to-transparent"
+            ></div>
+
+            <div
+                class="absolute inset-0 bg-gradient-to-t from-primary-dark/40 via-transparent to-black/5"
+            ></div>
+
+            <!-- Hero Content -->
+            <div
+                class="relative z-10 mx-auto flex min-h-[680px] max-w-site items-end px-5 pb-20 sm:px-8 md:items-center md:pb-0 lg:min-h-[740px] lg:px-12"
+            >
+                <div class="max-w-3xl">
+
+                    <p
+                        class="mb-5 text-xs font-bold uppercase tracking-[0.20em] text-secondary"
+                    >
+                        About BioCaucasus
+                    </p>
+
+                    <h1
+                        class="font-display text-5xl font-semibold leading-[0.94] tracking-tight text-white sm:text-6xl md:text-7xl lg:text-[5.5rem]"
+                    >
+                        Our Mission:
+                        <span class="block">
+                            Explore. Protect.
+                        </span>
+
+                        <span class="block text-secondary">
+                            Research.
+                        </span>
+                    </h1>
+
+                    <div class="mt-6 h-[2px] w-10 bg-secondary"></div>
+
+                    <p
+                        class="mt-6 max-w-xl text-base leading-8 text-white/85 sm:text-lg"
+                    >
+                        We connect curious travelers with field scientists to
+                        explore Georgia's extraordinary ecosystems, collect
+                        meaningful ecological data, and contribute to their
+                        long-term protection.
+                    </p>
+
+                    <a
+                        href="#story"
+                        class="mt-8 inline-flex items-center gap-3 text-sm font-bold uppercase tracking-[0.08em] text-white"
+                    >
+                        Discover Our Story
+
+                        <svg
+                            class="h-4 w-4"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+                            <path d="M12 5v14"></path>
+                            <path d="m6 13 6 6 6-6"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =========================================================
+             MISSION STATEMENT STRIP
+        ========================================================== -->
+        <section class="border-b border-border bg-warm">
+            <div
+                class="mx-auto grid max-w-site gap-8 px-5 py-12 sm:px-8 md:grid-cols-[0.45fr_1.4fr_1fr] md:items-center lg:px-12 lg:py-16"
+            >
+                <div class="border-r border-border pr-8">
+                    <div
+                        class="font-display text-4xl font-semibold text-secondary-dark"
+                    >
+                        01
+                    </div>
+
+                    <div
+                        class="mt-2 text-[10px] font-bold uppercase tracking-[0.16em] text-primary"
+                    >
+                        Why We Exist
+                    </div>
+                </div>
+
+                <h2
+                    class="font-display text-3xl font-semibold leading-tight text-primary-dark sm:text-4xl"
+                >
+                    Travel can do more than observe a landscape.
+                    <span class="text-secondary-dark">
+                        It can help us understand it.
+                    </span>
+                </h2>
+
+                <p class="text-sm leading-7 text-text-secondary">
+                    BioCaucasus combines eco-tourism and citizen science,
+                    creating expeditions that invite travelers to participate
+                    in real biodiversity observation and conservation work.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- =========================================================
+             OUR STORY
+        ========================================================== -->
+        <section
+            id="story"
+            class="bg-background py-20 lg:py-28"
+        >
+            <div
+                class="mx-auto grid max-w-site gap-14 px-5 sm:px-8 lg:grid-cols-[0.78fr_1.22fr] lg:items-center lg:gap-20 lg:px-12"
+            >
+
+                <!-- Story Text -->
+                <div>
+                    <p
+                        class="text-xs font-bold uppercase tracking-[0.18em] text-secondary-dark"
+                    >
+                        Our Story / Georgia
+                    </p>
+
+                    <h2
+                        class="mt-3 max-w-lg font-display text-4xl font-semibold leading-[1.05] text-primary-dark sm:text-5xl"
+                    >
+                        Where exploration meets field science.
+                    </h2>
+
+                    <div class="mt-5 h-[2px] w-9 bg-secondary"></div>
+
+                    <div class="mt-7 space-y-5 leading-8 text-text-secondary">
+                        <p>
+                            BioCaucasus began with a simple idea: Georgia's
+                            extraordinary biodiversity should not only be seen
+                            and admired — it should be carefully observed,
+                            documented, and protected.
+                        </p>
+
+                        <p>
+                            We bring travelers, researchers, students and local
+                            specialists together in the field to observe
+                            wildlife, monitor ecosystems, record environmental
+                            changes, and contribute useful data to conservation
+                            efforts.
+                        </p>
+
+                        <p>
+                            Every expedition is designed to create deeper
+                            knowledge while keeping our environmental footprint
+                            low and strengthening appreciation for Georgia's
+                            landscapes.
+                        </p>
+                    </div>
+
+                    <!-- Field Principle -->
+                    <div
+                        class="mt-10 flex gap-5 border-t border-border pt-7"
+                    >
+                        <div
+                            class="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-primary/25 text-primary"
+                        >
+                                    <img src="../img/compass.png" alt="Compass" class="h-8 w-8 object-contain">
+                        </div>
+
+                        <div>
+                            <p
+                                class="text-[10px] font-bold uppercase tracking-[0.15em] text-text-muted"
+                            >
+                                Field Principle 01
+                            </p>
+
+                            <p
+                                class="mt-2 font-display text-xl font-semibold leading-snug text-primary-dark"
+                            >
+                                Observe carefully. Travel lightly.
+                                Leave useful knowledge behind.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Field Image -->
+                <div
+                    class="relative min-h-[560px] overflow-hidden rounded-card border border-border shadow-soft lg:translate-y-6"
+                >
+                    <img
+                        src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=1600&q=90"
+                        alt="Field researchers exploring a rugged Caucasus landscape"
+                        class="absolute inset-0 h-full w-full object-cover"
+                    >
+
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-primary-dark/40 via-transparent to-transparent"
+                    ></div>
+
+                    <div
+                        class="absolute bottom-6 left-6 rounded-lg border border-white/20 bg-primary-dark/40 px-4 py-3 text-white backdrop-blur-md"
+                    >
+                        <div
+                            class="text-[10px] font-bold uppercase tracking-[0.15em] text-secondary-light"
+                        >
+                            Field Research
+                        </div>
+
+                        <div class="mt-1 text-sm">
+                            Greater Caucasus · Georgia
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =========================================================
+             FIELD DATA STRIP
+        ========================================================== -->
+        <section class="bg-primary-dark text-white">
+            <div
+                class="mx-auto grid max-w-site grid-cols-2 px-5 py-8 sm:px-8 md:grid-cols-4 lg:px-12"
+            >
+
+                <div class="border-white/15 px-4 py-5 text-center md:border-r">
+                    <div
+                        class="font-display text-4xl font-semibold text-secondary"
+                    >
+                        04
+                    </div>
+
+                    <div
+                        class="mt-1 text-[10px] font-bold uppercase tracking-[0.14em] text-white/70"
+                    >
+                        Distinct Ecosystems
+                    </div>
+                </div>
+
+                <div class="border-white/15 px-4 py-5 text-center md:border-r">
+                    <div
+                        class="font-display text-4xl font-semibold text-secondary"
+                    >
+                        FIELD
+                    </div>
+
+                    <div
+                        class="mt-1 text-[10px] font-bold uppercase tracking-[0.14em] text-white/70"
+                    >
+                        Based Research
+                    </div>
+                </div>
+
+                <div class="border-white/15 px-4 py-5 text-center md:border-r">
+                    <div
+                        class="font-display text-4xl font-semibold text-secondary"
+                    >
+                        LOW
+                    </div>
+
+                    <div
+                        class="mt-1 text-[10px] font-bold uppercase tracking-[0.14em] text-white/70"
+                    >
+                        Impact Travel
+                    </div>
+                </div>
+
+                <div class="px-4 py-5 text-center">
+                    <div
+                        class="font-display text-4xl font-semibold text-secondary"
+                    >
+                        100%
+                    </div>
+
+                    <div
+                        class="mt-1 text-[10px] font-bold uppercase tracking-[0.14em] text-white/70"
+                    >
+                        Citizen Science Focus
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =========================================================
+             CORE CONSERVATION PILLARS
+        ========================================================== -->
+        <section class="bg-background py-20 lg:py-28">
+            <div class="mx-auto max-w-site px-5 sm:px-8 lg:px-12">
+
+                <!-- Section Header -->
+                <div class="mx-auto max-w-reading text-center">
+
+                    <p
+                        class="text-xs font-bold uppercase tracking-[0.18em] text-secondary-dark"
+                    >
+                        What Guides Our Work
+                    </p>
+
+                    <h2
+                        class="mt-3 font-display text-4xl font-semibold text-primary-dark sm:text-5xl"
+                    >
+                        Our Core Pillars
+                    </h2>
+
+                    <p class="mt-4 leading-7 text-text-secondary">
+                        Four principles shape every expedition, observation and
+                        conservation decision we make.
+                    </p>
+                </div>
+
+                <!-- Pillars Grid -->
+                <div
+                    class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4"
+                >
+
+                    <!-- Biodiversity Research -->
+                    <article
+                        class="group rounded-card border border-primary/25 bg-white p-7 transition duration-300 hover:-translate-y-1.5 hover:border-primary hover:shadow-card"
+                    >
+                        <div
+                            class="grid h-12 w-12 place-items-center rounded-full bg-secondary/10 text-secondary-dark transition group-hover:bg-secondary/20"
+                        >
+                            <svg
+                                class="h-7 w-7"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                            >
+                                <circle cx="9" cy="9" r="5"></circle>
+                                <path d="m13 13 6 6"></path>
+                                <path d="M7 10c2-4 4-5 7-5"></path>
+                            </svg>
+                        </div>
+
+                        <h3
+                            class="mt-6 font-display text-2xl font-semibold text-primary-dark"
+                        >
+                            Biodiversity Research
+                        </h3>
+
+                        <p class="mt-4 text-sm leading-7 text-text-secondary">
+                            We collect and share reliable observations that help
+                            researchers better understand Georgia's species,
+                            habitats and ecological processes.
+                        </p>
+                    </article>
+
+                    <!-- Responsible Tourism -->
+                    <article
+                        class="group rounded-card border border-primary/25 bg-white p-7 transition duration-300 hover:-translate-y-1.5 hover:border-primary hover:shadow-card"
+                    >
+                        <div
+                            class="grid h-12 w-12 place-items-center rounded-full bg-secondary/10 text-secondary-dark transition group-hover:bg-secondary/20"
+                        >
+                            <svg
+                                class="h-7 w-7"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                            >
+                                <path d="M4 17c4-1 7-3 9-6"></path>
+                                <path d="M7 5h4l1 5-3 2"></path>
+                                <path d="M6 19h12"></path>
+                            </svg>
+                        </div>
+
+                        <h3
+                            class="mt-6 font-display text-2xl font-semibold text-primary-dark"
+                        >
+                            Responsible Tourism
+                        </h3>
+
+                        <p class="mt-4 text-sm leading-7 text-text-secondary">
+                            We promote low-impact exploration that respects
+                            local communities, wildlife, culture and natural
+                            landscapes.
+                        </p>
+                    </article>
+
+                    <!-- Habitat Protection -->
+                    <article
+                        class="group rounded-card border border-primary/25 bg-white p-7 transition duration-300 hover:-translate-y-1.5 hover:border-primary hover:shadow-card"
+                    >
+                        <div
+                            class="grid h-12 w-12 place-items-center rounded-full bg-secondary/10 text-secondary-dark transition group-hover:bg-secondary/20"
+                        >
+                            <svg
+                                class="h-7 w-7"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                            >
+                                <path d="m3 18 6-9 4 5 3-4 5 8H3Z"></path>
+                                <path d="M12 2c5 1 8 4 9 8"></path>
+                            </svg>
+                        </div>
+
+                        <h3
+                            class="mt-6 font-display text-2xl font-semibold text-primary-dark"
+                        >
+                            Habitat Protection
+                        </h3>
+
+                        <p class="mt-4 text-sm leading-7 text-text-secondary">
+                            Our expeditions strengthen awareness of vulnerable
+                            ecosystems and the importance of protecting them
+                            over the long term.
+                        </p>
+                    </article>
+
+                    <!-- Citizen Participation -->
+                    <article
+                        class="group rounded-card border border-primary/25 bg-white p-7 transition duration-300 hover:-translate-y-1.5 hover:border-primary hover:shadow-card"
+                    >
+                        <div
+                            class="grid h-12 w-12 place-items-center rounded-full bg-secondary/10 text-secondary-dark transition group-hover:bg-secondary/20"
+                        >
+                            <svg
+                                class="h-7 w-7"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                            >
+                                <circle cx="12" cy="7" r="3"></circle>
+                                <circle cx="5" cy="10" r="2"></circle>
+                                <circle cx="19" cy="10" r="2"></circle>
+                                <path d="M7 20v-3c0-3 2-5 5-5s5 2 5 5v3"></path>
+                                <path d="M2 19v-2c0-2 1-4 3-4"></path>
+                                <path d="M22 19v-2c0-2-1-4-3-4"></path>
+                            </svg>
+                        </div>
+
+                        <h3
+                            class="mt-6 font-display text-2xl font-semibold text-primary-dark"
+                        >
+                            Citizen Participation
+                        </h3>
+
+                        <p class="mt-4 text-sm leading-7 text-text-secondary">
+                            Travelers become active observers and contributors
+                            to meaningful scientific work rather than passive
+                            spectators.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =========================================================
+             FOUR LIVING LABORATORIES
+        ========================================================== -->
+        <section class="bg-primary-dark py-20 text-white lg:py-24">
+            <div class="mx-auto max-w-site px-5 sm:px-8 lg:px-12">
+
+                <div class="max-w-2xl">
+                    <p
+                        class="text-xs font-bold uppercase tracking-[0.18em] text-secondary"
+                    >
+                        Georgia's Living Laboratories
+                    </p>
+
+                    <h2
+                        class="mt-3 font-display text-4xl font-semibold sm:text-5xl"
+                    >
+                        Four landscapes. Four research worlds.
+                    </h2>
+                </div>
+
+                <div
+                    class="mt-12 grid overflow-hidden rounded-card border border-white/10 md:grid-cols-2 xl:grid-cols-4"
+                >
+
+                    <!-- Lagodekhi -->
+                    <article
+                        class="group relative min-h-[430px] overflow-hidden"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1000&q=85"
+                            alt="Dense ancient forest representing Lagodekhi"
+                            class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                        >
+
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-black/5"
+                        ></div>
+
+                        <div class="absolute inset-x-0 bottom-0 p-6">
+                            <div
+                                class="text-[10px] font-bold uppercase tracking-[0.18em] text-secondary-light"
+                            >
+                                Lagodekhi
+                            </div>
+
+                            <h3
+                                class="mt-2 font-display text-3xl font-semibold"
+                            >
+                                Ancient Forest
+                            </h3>
+
+                            <p class="mt-3 text-sm leading-6 text-white/70">
+                                Bird and large mammal tracking across ancient
+                                Caucasian woodland.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Vashlovani -->
+                    <article
+                        class="group relative min-h-[430px] overflow-hidden"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1000&q=85"
+                            alt="Dry semi-desert landscape representing Vashlovani"
+                            class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                        >
+
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"
+                        ></div>
+
+                        <div class="absolute inset-x-0 bottom-0 p-6">
+                            <div
+                                class="text-[10px] font-bold uppercase tracking-[0.18em] text-secondary-light"
+                            >
+                                Vashlovani
+                            </div>
+
+                            <h3
+                                class="mt-2 font-display text-3xl font-semibold"
+                            >
+                                Semi-Desert & Steppe
+                            </h3>
+
+                            <p class="mt-3 text-sm leading-6 text-white/70">
+                                Gazelle observation and ecological research in
+                                Georgia's dry eastern landscapes.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Mtirala -->
+                    <article
+                        class="group relative min-h-[430px] overflow-hidden"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1000&q=85"
+                            alt="Humid rainforest representing Mtirala"
+                            class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                        >
+
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent"
+                        ></div>
+
+                        <div class="absolute inset-x-0 bottom-0 p-6">
+                            <div
+                                class="text-[10px] font-bold uppercase tracking-[0.18em] text-secondary-light"
+                            >
+                                Mtirala
+                            </div>
+
+                            <h3
+                                class="mt-2 font-display text-3xl font-semibold"
+                            >
+                                Colchic Rainforest
+                            </h3>
+
+                            <p class="mt-3 text-sm leading-6 text-white/70">
+                                Amphibian and high-rainfall ecosystem monitoring
+                                within Georgia's humid west.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Kazbegi -->
+                    <article
+                        class="group relative min-h-[430px] overflow-hidden"
+                    >
+                        <img
+                            src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=85"
+                            alt="Alpine Caucasus mountains representing Kazbegi"
+                            class="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                        >
+
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent"
+                        ></div>
+
+                        <div class="absolute inset-x-0 bottom-0 p-6">
+                            <div
+                                class="text-[10px] font-bold uppercase tracking-[0.18em] text-glacier-light"
+                            >
+                                Kazbegi
+                            </div>
+
+                            <h3
+                                class="mt-2 font-display text-3xl font-semibold"
+                            >
+                                Alpine Zone
+                            </h3>
+
+                            <p class="mt-3 text-sm leading-6 text-white/70">
+                                Caucasian tur conservation, glacier observation,
+                                and climate research.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =========================================================
+             RESEARCH TEAM
+        ========================================================== -->
+        <section class="bg-background py-20 lg:py-28">
+            <div class="mx-auto max-w-site px-5 sm:px-8 lg:px-12">
+
+                <!-- Header -->
+                <div class="mx-auto max-w-reading text-center">
+                    <p
+                        class="text-xs font-bold uppercase tracking-[0.18em] text-secondary-dark"
+                    >
+                        People Behind the Fieldwork
+                    </p>
+
+                    <h2
+                        class="mt-3 font-display text-4xl font-semibold text-primary-dark sm:text-5xl"
+                    >
+                        Meet Our Lead Scientists
+                    </h2>
+
+                    <p class="mt-4 leading-7 text-text-secondary">
+                        Field knowledge, local experience and rigorous
+                        observation guide every BioCaucasus expedition.
+                    </p>
+                </div>
+
+                <!-- Scientist Grid -->
+                <div
+                    class="mt-12 grid gap-7 lg:grid-cols-3"
+                >
+
+                    <!-- Scientist 1 -->
+                    <article
+                        class="overflow-hidden rounded-card border border-border bg-white shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-card"
+                    >
+                        <div class="aspect-[4/3] overflow-hidden">
+                            <img
+                                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=1000&q=85"
+                                alt="Field ornithologist"
+                                class="h-full w-full object-cover"
+                            >
+                        </div>
+
+                        <div class="p-6">
+                            <h3
+                                class="font-display text-2xl font-semibold text-primary-dark"
+                            >
+                                Dr. Giorgi Tsereteli
+                            </h3>
+
+                            <p
+                                class="mt-2 text-[10px] font-bold uppercase tracking-[0.14em] text-secondary-dark"
+                            >
+                                Ornithologist
+                            </p>
+
+                            <span
+                                class="mt-4 inline-flex rounded-full bg-lagodekhi/10 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.08em] text-lagodekhi"
+                            >
+                                Lagodekhi / Ancient Forest
+                            </span>
+
+                            <p class="mt-4 text-sm leading-7 text-text-secondary">
+                                Specializes in bird ecology, migration and
+                                forest biodiversity monitoring.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Scientist 2 -->
+                    <article
+                        class="overflow-hidden rounded-card border border-border bg-white shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-card"
+                    >
+                        <div class="aspect-[4/3] overflow-hidden">
+                            <img
+                                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=1000&q=85"
+                                alt="Alpine ecologist"
+                                class="h-full w-full object-cover"
+                            >
+                        </div>
+
+                        <div class="p-6">
+                            <h3
+                                class="font-display text-2xl font-semibold text-primary-dark"
+                            >
+                                Dr. Maka Abuladze
+                            </h3>
+
+                            <p
+                                class="mt-2 text-[10px] font-bold uppercase tracking-[0.14em] text-secondary-dark"
+                            >
+                                Alpine Ecologist
+                            </p>
+
+                            <span
+                                class="mt-4 inline-flex rounded-full bg-kazbegi/10 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.08em] text-kazbegi"
+                            >
+                                Kazbegi / Alpine Zone
+                            </span>
+
+                            <p class="mt-4 text-sm leading-7 text-text-secondary">
+                                Researches high-mountain ecosystems, alpine
+                                biodiversity and climate-driven environmental
+                                change.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Scientist 3 -->
+                    <article
+                        class="overflow-hidden rounded-card border border-border bg-white shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-card"
+                    >
+                        <div class="aspect-[4/3] overflow-hidden">
+                            <img
+                                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1000&q=85"
+                                alt="Conservation biologist"
+                                class="h-full w-full object-cover"
+                            >
+                        </div>
+
+                        <div class="p-6">
+                            <h3
+                                class="font-display text-2xl font-semibold text-primary-dark"
+                            >
+                                Dr. Levan Matcharashvili
+                            </h3>
+
+                            <p
+                                class="mt-2 text-[10px] font-bold uppercase tracking-[0.14em] text-secondary-dark"
+                            >
+                                Conservation Biologist
+                            </p>
+
+                            <span
+                                class="mt-4 inline-flex rounded-full bg-mtirala/10 px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.08em] text-mtirala"
+                            >
+                                Mtirala / Rainforest
+                            </span>
+
+                            <p class="mt-4 text-sm leading-7 text-text-secondary">
+                                Focuses on amphibian conservation, habitat health
+                                and rainforest monitoring.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+
+                
+            </div>
+        </section>
+
+
+        <!-- =========================================================
+             FIELD PRINCIPLE QUOTE
+        ========================================================== -->
+        <section class="relative overflow-hidden border-y border-border bg-warm">
+            <div
+                class="pointer-events-none absolute -right-10 bottom-0 h-80 w-80 text-primary opacity-[0.05]"
+                aria-hidden="true"
+            >
+                <svg
+                    viewBox="0 0 200 300"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1"
+                >
+                    <path d="M90 300C90 220 100 150 135 70"></path>
+                    <path d="M99 215C65 198 44 175 27 145"></path>
+                    <path d="M110 175C145 158 168 130 180 98"></path>
+                    <path d="M95 250C62 235 39 213 22 185"></path>
+                </svg>
+            </div>
+
+            <div
+                class="relative mx-auto max-w-4xl px-5 py-20 text-center sm:px-8 lg:py-24"
+            >
+                <div
+                    class="font-display text-8xl font-semibold leading-none text-secondary/60"
+                >
+                    “
+                </div>
+
+                <blockquote
+                    class="-mt-8 font-display text-3xl font-semibold leading-tight text-primary-dark sm:text-4xl"
+                >
+                    The most meaningful expedition leaves the landscape
+                    with more knowledge — not more impact.
+                </blockquote>
+
+                <p
+                    class="mt-6 text-xs font-bold uppercase tracking-[0.18em] text-secondary-dark"
+                >
+                    The BioCaucasus Field Principle
+                </p>
+            </div>
+        </section>
+
+
+        <!-- =========================================================
+             FIELDWORK CTA
+        ========================================================== -->
+        <section
+            class="relative overflow-hidden bg-primary-dark text-white"
+        >
+            <!-- Subtle Topographic Decoration -->
+            <svg
+                class="pointer-events-none absolute inset-0 h-full w-full opacity-[0.06]"
+                viewBox="0 0 1200 400"
+                fill="none"
+                stroke="white"
+                stroke-width="1"
+                preserveAspectRatio="none"
+                aria-hidden="true"
+            >
+                <path d="M0 110C150 40 250 180 420 100S700 60 850 140s230 20 350-50"></path>
+                <path d="M0 170C160 100 280 230 450 150s280-30 430 60 220 20 320-30"></path>
+                <path d="M0 240C180 150 330 280 500 210s290-20 430 50 180 30 270 0"></path>
+                <path d="M0 310C190 220 350 340 520 280s310-30 470 30 140 20 210-10"></path>
+            </svg>
+
+            <div
+                class="relative mx-auto grid max-w-site gap-10 px-5 py-20 sm:px-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center lg:px-12 lg:py-24"
+            >
+                <div>
+                    <p
+                        class="text-xs font-bold uppercase tracking-[0.18em] text-secondary"
+                    >
+                        Become Part of the Research
+                    </p>
+
+                    <h2
+                        class="mt-3 max-w-2xl font-display text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl"
+                    >
+                        Ready to Join
+                        <span class="block">
+                            the Fieldwork?
+                        </span>
+                    </h2>
+
+                    <p class="mt-5 max-w-xl leading-7 text-white/70">
+                        Choose an ecosystem, meet the researchers and
+                        contribute to real field observation across Georgia.
+                    </p>
+                </div>
+
+                <div class="lg:text-right">
+                    <a
+                        href="contact.html"
+                        class="inline-flex min-h-14 items-center gap-4 rounded-lg bg-secondary px-8 py-4 text-sm font-bold uppercase tracking-[0.08em] text-primary-dark shadow-soft transition duration-300 hover:-translate-y-1 hover:bg-secondary-dark hover:text-white hover:shadow-card"
+                    >
+                        Join an Expedition
+
+                        <svg
+                            class="h-5 w-5"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+                            <path d="M5 12h14"></path>
+                            <path d="m13 6 6 6-6 6"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+    <footer class="bg-[#172b21] text-white">
+
+        <div
+            class="mx-auto grid max-w-site gap-12 px-5 py-14 sm:px-8 md:grid-cols-2 lg:grid-cols-[1.4fr_0.8fr_1fr] lg:px-12"
+        >
+
+            <!-- Brand -->
+            <div>
+                <a
+                    href="index.html"
+                    class="inline-flex items-center"
+                >
+                    <img
+                        src="BioCaucasus_logo_exact(1).svg"
+                        alt="BioCaucasus — Caucasus BioSphere Expeditions"
+                        class="h-[70px] w-auto object-contain"
+                    >
+                </a>
+
+                <p class="mt-5 max-w-xs text-sm leading-6 text-white/65">
+                    Explore Georgia. Protect Nature. Join real scientific
+                    expeditions.
+                </p>
+
+                <!-- Social Links -->
+                <div class="mt-6 flex gap-3">
+
+                    <a
+                        href="#"
+                        aria-label="Instagram"
+                        class="grid h-9 w-9 place-items-center rounded-full border border-white/20 text-white/70 transition hover:border-secondary hover:text-secondary"
+                    >
+                        <svg
+                            class="h-4 w-4"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.7"
+                        >
+                            <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                            <circle cx="12" cy="12" r="4"></circle>
+                            <circle cx="17.5" cy="6.5" r=".8" fill="currentColor"></circle>
+                        </svg>
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="Facebook"
+                        class="grid h-9 w-9 place-items-center rounded-full border border-white/20 text-white/70 transition hover:border-secondary hover:text-secondary"
+                    >
+                        <span class="text-sm font-bold">f</span>
+                    </a>
+
+                    <a
+                        href="#"
+                        aria-label="YouTube"
+                        class="grid h-9 w-9 place-items-center rounded-full border border-white/20 text-white/70 transition hover:border-secondary hover:text-secondary"
+                    >
+                        <svg
+                            class="h-4 w-4"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.7"
+                        >
+                            <rect x="3" y="6" width="18" height="12" rx="3"></rect>
+                            <path d="m10 9 5 3-5 3V9Z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Explore -->
+            <div>
+                <h3
+                    class="text-xs font-bold uppercase tracking-[0.14em] text-secondary-light"
+                >
+                    Explore
+                </h3>
+
+                <nav class="mt-5 flex flex-col gap-3">
+                    <a
+                        href="index.html"
+                        class="w-fit text-sm text-white/70 transition hover:text-white"
+                    >
+                        Home
+                    </a>
+
+                    <a
+                        href="expeditions.html"
+                        class="w-fit text-sm text-white/70 transition hover:text-white"
+                    >
+                        Expeditions
+                    </a>
+
+                    <a
+                        href="about.html"
+                        class="w-fit text-sm text-white transition"
+                    >
+                        About Us
+                    </a>
+
+                    <a
+                        href="contact.html"
+                        class="w-fit text-sm text-white/70 transition hover:text-white"
+                    >
+                        Contact
+                    </a>
+                </nav>
+            </div>
+
+            <!-- Expedition Team -->
+            <div>
+                <h3
+                    class="text-xs font-bold uppercase tracking-[0.14em] text-secondary-light"
+                >
+                    Expedition Team
+                </h3>
+
+                <div class="mt-5 space-y-4 text-sm text-white/70">
+
+                    <div class="flex items-start gap-3">
+                        <svg
+                            class="mt-0.5 h-4 w-4 shrink-0"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.7"
+                        >
+                            <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path>
+                            <circle cx="12" cy="10" r="2.5"></circle>
+                        </svg>
+
+                        Tbilisi, Georgia
+                    </div>
+
+                    <a
+                        href="mailto:info@biocaucasus.ge"
+                        class="flex items-center gap-3 transition hover:text-white"
+                    >
+                        <svg
+                            class="h-4 w-4"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.7"
+                        >
+                            <path d="M4 6h16v12H4z"></path>
+                            <path d="m4 7 8 6 8-6"></path>
+                        </svg>
+
+                        info@biocaucasus.ge
+                    </a>
+
+                    <a
+                        href="tel:+995555223344"
+                        class="flex items-center gap-3 transition hover:text-white"
+                    >
+                        <svg
+                            class="h-4 w-4"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.7"
+                        >
+                            <path d="M6 3h4l2 5-3 2c1.3 3 3.5 5.2 6.5 6.5l2-3 5 2v4c0 1-.8 2-2 2C11 21.5 2.5 13 2.5 3.5c0-1 .8-2 2-2H6"></path>
+                        </svg>
+
+                        +995 555 22 33 44
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="border-t border-white/10">
+            <div
+                class="mx-auto flex max-w-site flex-col gap-4 px-5 py-6 text-xs text-white/45 sm:px-8 md:flex-row md:items-center md:justify-between lg:px-12"
+            >
+                <p>
+                    © 2026 BioCaucasus. All rights reserved.
+                </p>
+
+                <div class="flex gap-6">
+                    <a href="#" class="transition hover:text-white">
+                        Privacy Policy
+                    </a>
+
+                    <a href="#" class="transition hover:text-white">
+                        Terms of Use
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- =========================================================
+         VANILLA JAVASCRIPT
+    ========================================================== -->
+    <script>
+
+        /* Mobile Navigation */
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        menuToggle.addEventListener('click', () => {
+
+            const isHidden =
+                mobileMenu.classList.contains('hidden');
+
+            mobileMenu.classList.toggle('hidden');
+
+            menuToggle.setAttribute(
+                'aria-expanded',
+                String(isHidden)
+            );
+        });
+
+
+        /* Close Mobile Menu After Navigation */
+        const mobileLinks =
+            mobileMenu.querySelectorAll('a');
+
+        mobileLinks.forEach((link) => {
+
+            link.addEventListener('click', () => {
+
+                mobileMenu.classList.add('hidden');
+
+                menuToggle.setAttribute(
+                    'aria-expanded',
+                    'false'
+                );
+            });
+        });
+
+
+        /* Navbar Scroll Treatment */
+        const siteHeader =
+            document.getElementById('siteHeader');
+
+        window.addEventListener('scroll', () => {
+
+            if (window.scrollY > 40) {
+
+                siteHeader.classList.add(
+                    'shadow-soft'
+                );
+
+            } else {
+
+                siteHeader.classList.remove(
+                    'shadow-soft'
+                );
+            }
+        });
+
+    </script>
+
+</body>
+</html>
